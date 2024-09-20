@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <!-- daisy Ui cdn -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-slate-900">
+    <header>
+        <h3>This is header</h3>
+
+    </header>
+    <main>
+        
+         
+        <section class="container mx-auto">
+            <!-- search bar -->
+            <div class="text-center my-10 bg-white mx-auto py-5 rounded-xl">
+                <input id="search-fild" type="text" placeholder="Search your phone" class="bg-gray-100 input input-bordered w-full max-w-xs" />
+                <button onclick="handelSearch()" class="btn btn-primary">Search</button>
+             </div>
+
+             <!-- cart section -->
+            <div id="phone-cart" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-10 ">
+               
+            </div>
+           
+        </section>
+        <!-- show result -->
+        <section>
+            <!-- loader -->
+            <div class="text-center hidden" id="loadingSpinner">
+                <span class="loading loading-dots loading-lg text-white"></span>
+            </div>
+
+             <!-- Show all btn -->
+             <div id="show-all-btn" class="hidden text-center py-5">
+                <button onclick="handelShowAll()" class="btn btn-accent">Show all</button>
+             </div>
+        </section>
+
+
+        <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+
+    <div id="show-detail-About-Phone"></div>
+    
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+    </main>
+    
+    <script src="js/phone.js"></script>
+</body>
+</html>
